@@ -1,0 +1,365 @@
+@media only screen and (min-width:992px) and (max-width:1200px) {
+    
+    .redes-sociais ul li{
+        margin-right: 25px;
+    }
+
+    .txt_dir{
+        width: 67% !important;
+    }
+
+    .img_esq {
+        padding-top: 55px;
+    }
+
+    .sub-menu-produtos ul li {
+        margin-right: 0.7px;
+        padding: 45px 11.3px 0;
+        width: 155px;
+        font-size: 16px;
+    }
+
+    .blogslider .flex-viewport{
+        width: 970px;
+    }
+
+    .box-produto > .row .img-linha-prod{
+        width: 100%;
+        height: auto;
+    }
+
+    .desc-produto{
+        font-size: 16px;
+    }
+
+    .banner .metaslider .caption-wrap{
+        top: 15%;
+    }
+
+    .banner .metaslider .caption-wrap h2{
+        font-size: 35px;
+    }
+
+    .banner .metaslider .caption-wrap h3{
+        font-size: 24px;
+        margin-bottom: 38px;
+    }
+
+    #disqus_thread {
+        margin: 0 auto;
+        width: 970px;
+    }
+
+}
+
+@media only screen and (max-width:991px) {
+    .navbar-nav>li>a{
+        padding: 10px;
+    }
+    
+    .redes-sociais ul li{
+        margin-right: 10px;
+    }
+    
+    .section img{
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .nome-prod-cat{
+        font-size: 13px;
+    }
+    
+    section h2{
+        font-size: 30px;
+    }
+    
+    .nome_depoimento{
+        font-size: 37px;
+        margin-bottom: 15px;
+    }
+    
+    .txt_depoimento, .cargo {
+        font-size: 20px;
+    }
+    
+    .title-blog{
+        font-size: 20px;
+    }
+    
+    .txt-post-blog {
+        height: 179px;
+    }
+
+    .row_verde h1{
+        font-size: 28px !important;
+        line-height: 30px !important;
+    }
+
+    .row_verde h5 {
+        font-size: 14px !important;
+    }
+
+    h4 {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .sub-menu-produtos{
+        font-size: 12px;
+        height: 100px;
+    }
+
+    .sub-menu-produtos ul li {
+        max-width: 118px;
+        padding: 39px 17px 0;
+        height: 100px;
+        margin-right: 1.2px;
+    }
+
+    .blogslider .flex-viewport{
+        width: 750px;
+    }
+
+    .box-produto > .row .img-linha-prod{
+        width: 100%;
+        height: auto;
+    }
+
+    .desc-produto{
+        font-size: 12px;
+    }
+
+    .banner .metaslider .caption-wrap{
+        top: 15%;
+    }
+
+    .banner .metaslider .caption-wrap h2{
+        font-size: 25px;
+    }
+
+    .banner .metaslider .caption-wrap h3{
+        font-size: 17px;
+        margin-bottom: 38px;
+    }
+
+    .banner .metaslider .caption-wrap .bt-confira{
+        font-size: 20px;
+        height: 48px;
+        line-height: 48px;
+        width: 274px;
+    }
+
+    .navbar-toggle{
+        margin-right: 54px;
+    }
+
+    #disqus_thread {
+        margin: 0 auto;
+        width: 750px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    
+    .navbar-nav{
+        float: none !important;
+        background-color: #007f00;
+        margin-top: 0px !important;
+    }
+    
+    .navbar-nav > li > a{
+        color: #fff !important;
+    }   
+    
+    footer img{
+        width: auto;
+    }
+    
+    footer div, section div{
+        margin-bottom: 25px;
+    }
+    
+    .logo-footer{
+        text-align: center;
+    }
+    
+    .redes-sociais {
+        margin: 30px auto;
+        position: relative;
+        width: 160px;
+    }
+    
+    .redes-sociais ul li{
+        margin-right: 40px;
+    }
+
+    .banner{
+        display: none;
+    }
+    
+    .row_verde{
+        padding: 25px 0;
+        display: block;
+    }
+    
+    .row_verde h3{
+        font-size: 20px;
+        line-height: 40px;
+    }
+    
+    .section {
+        padding: 25px 0;
+    }
+    
+    .section img{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .banner .metaslider .caption-wrap{
+        top: 15%;
+    }
+
+    .banner .metaslider .caption-wrap h2{
+        font-size: 14px;
+    }
+
+    .banner .metaslider .caption-wrap h3{
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .banner .metaslider .caption-wrap .bt-confira{
+        font-size: 15px;
+        height: 30px;
+        line-height: 30px;
+        width: 174px;
+    }
+    
+    .txt-post-blog, .title-blog {
+        height: auto;
+    }
+    
+    .box-bt-veja-mais {
+        float: none !important;
+        margin: 0 auto;
+        width: 130px;
+    }
+    
+    .row-posts-blog {
+        margin-top: 10px;
+    }
+
+    .sub-menu-produtos{
+        border-bottom: none;
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    .sub-menu-produtos .navbar-toggle{
+        position: absolute;
+        top: 6px;
+        right: 10px;
+        margin-top: 0;
+        margin-right: 0;
+        border-color: #ddd;
+    }
+
+    .sub-menu-produtos .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+
+    .sub-menu-produtos .collapse.in{
+        height: 240px;
+    }
+
+    .sub-menu-produtos ul li {
+        width: 100%;
+        max-width: inherit;
+        padding: 15px 0;
+        height: 50px;
+    }
+
+    .listagem-produtos {
+        clear: both;
+        padding-top: 40px;
+    }
+
+    .box-produto > .row div{
+        margin-bottom: 20px;
+    }
+
+    .blogslider .flex-viewport{
+        width: 95%;
+    }
+
+    .img-post-blog img{
+        width: 100%;
+        height: auto;
+    }
+
+    .blogslider .flex-direction-nav .flex-prev, .blogslider.flexslider:hover .flex-prev{
+        left: inherit;
+        right: 90px;
+        top: inherit;
+        bottom: 0;
+    }
+
+    .blogslider .flex-direction-nav .flex-next, .blogslider.flexslider:hover .flex-next{
+        background-position: 100% 0;
+        right: 20px;
+        top: inherit;
+        bottom: 0;
+    }
+
+    .box-form-search{
+        right: 24px;
+        width: 280px;
+    }
+
+    .input_search{
+        font-size: 10px;
+    }
+
+    .box-search{
+        width: 24px;
+    }
+    
+    #disqus_thread {
+        margin: 0 auto;
+        width: auto;
+
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /*MENU*/
+    .navbar ul li ul{
+        left: inherit;
+        position: relative;
+        top: inherit;
+        width: 104.5%;
+    }
+
+    .navbar ul li ul li{
+        min-height: 29px;
+        height: auto;
+    }
+
+    .navbar ul li ul li ul{
+        left: inherit;
+        position: relative;
+        top: inherit;
+        width: 100%;
+    }
+
+    .navbar ul li ul li ul li a{
+        padding-left: 30px;
+    }
+}
