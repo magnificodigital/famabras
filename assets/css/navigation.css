@@ -1,0 +1,13 @@
+.navigation a,
+.navigation span {
+    background: #127112;
+    padding: 10px;
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.navigation span.current,
+.navigation a:hover {
+	background: #0e470e;
+}

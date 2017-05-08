@@ -1,9 +1,13 @@
 <?php 
-    /*
-        Template Name: Fale Conosco
-    */
 
-get_header(); ?>
+	/*
+		Template Name: Thank You Page
+	*/
+
+	get_header();
+
+?>
+
 
 <head>
 <link type="text/css" href="<?php echo get_bloginfo('template_url')."/assets/css/tagit.css"; ?>" rel="stylesheet" media="all" />
@@ -48,38 +52,9 @@ get_header(); ?>
             border-color: #159815;
         }
 
-    .boxtelefones {
-        text-align: center;
-        margin: 30px 0;
-    }
-
-    .boxtelefones span.exibirtelefone {
-        color: #127112;
-        font-size: 16px;
-        padding: 8px;
-        background: #FFF;
-        margin: 0 auto;
-        text-align: center;
-        display: table;
-        cursor: pointer;
-        transition: 0.2s;
-        -webkit-transition: 0.2s;
-        -moz-transition: 0.2s;
-    }
-
-    .boxtelefones span.exibirtelefone:hover {
-        opacity: 0.9;
-    }
-
-    .boxtelefones .telefones {color: #FFF;}
-
-
-
 </style>
 
 </head>
-
- 
         <div id="container">
             <div id="content">
  
@@ -90,12 +65,6 @@ get_header(); ?>
                         <div class="container">
                         
                             <h1><?php echo types_render_field("titulo-pagina", array("output"=>"html"));  ?></h1>
-                            <div class="boxtelefones">
-                                <span class="exibirtelefone"><strong>Clique para exibir telefone</strong></span>
-                                <h4 class="telefones">
-                                    <?php echo types_render_field("telefone", array("output"=>"html"));  ?>
-                                </h4>
-                            </div>
                             <h5><?php echo types_render_field("sub-titulo", array("output"=>"html"));  ?></h5>
                             
                         </div>
@@ -105,7 +74,7 @@ get_header(); ?>
                         <div class="container"> 
                             <div class="row">
                                 <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" style="text-align: center;">
                                     <?php the_content(); ?>
                                 </div>
                                 <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
@@ -186,19 +155,17 @@ get_header(); ?>
 
         </script>
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
-        <script type="text/javascript">
-            var SPMaskBehavior = function (val) {
-              return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-            },
-            spOptions = {
-              onKeyPress: function(val, e, field, options) {
-                  field.mask(SPMaskBehavior.apply({}, arguments), options);
-                }
-            };
 
-            $('.telefone').mask(SPMaskBehavior, spOptions);
-        </script>
- 
+		<script type="text/javascript">
+			//coloca os valores no input
+			$(function(){
+				$('#linha-modelo').val('<?php echo $linha ?> - <?php echo $modelo ?>');
+			});
+
+			document.addEventListener( 'wpcf7mailsent', function( event ) {
+			    location = '<?php echo get_bloginfo('url') ?>/obrigado/';
+			}, false );
+
+		</script>
+		 
 <?php get_footer(); ?>

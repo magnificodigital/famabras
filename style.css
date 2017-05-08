@@ -1096,6 +1096,7 @@ footer p{
     float: left;
     color: #fff;
     margin-right: 15px;
+    border: 0;
 }
 
 .bt-solicitar-orcamento:hover{

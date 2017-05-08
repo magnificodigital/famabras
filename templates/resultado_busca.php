@@ -1,11 +1,11 @@
 <?php
-if(isset($_POST['termo']))
+if(isset($_GET['termo']))
 {
-    $termo = $_POST['termo'];
+    $termo = $_GET['termo'];
 }
 else
 {
-    echo '<script>window.location.href="http://mdcode.local/famabras/"</script>';
+    //echo '<script>window.location.href="http://mdcode.local/famabras/"</script>';
 } 
 	/*
 		Template Name: Resultado Busca

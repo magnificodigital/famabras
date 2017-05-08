@@ -1,9 +1,16 @@
 <?php 
-    /*
-        Template Name: Fale Conosco
-    */
 
-get_header(); ?>
+	/*
+		Template Name: Orçamento
+	*/
+
+	$modelo = $_POST['modelo'];
+	$linha = $_POST['linha'];
+
+	get_header();
+
+?>
+
 
 <head>
 <link type="text/css" href="<?php echo get_bloginfo('template_url')."/assets/css/tagit.css"; ?>" rel="stylesheet" media="all" />
@@ -48,38 +55,9 @@ get_header(); ?>
             border-color: #159815;
         }
 
-    .boxtelefones {
-        text-align: center;
-        margin: 30px 0;
-    }
-
-    .boxtelefones span.exibirtelefone {
-        color: #127112;
-        font-size: 16px;
-        padding: 8px;
-        background: #FFF;
-        margin: 0 auto;
-        text-align: center;
-        display: table;
-        cursor: pointer;
-        transition: 0.2s;
-        -webkit-transition: 0.2s;
-        -moz-transition: 0.2s;
-    }
-
-    .boxtelefones span.exibirtelefone:hover {
-        opacity: 0.9;
-    }
-
-    .boxtelefones .telefones {color: #FFF;}
-
-
-
 </style>
 
 </head>
-
- 
         <div id="container">
             <div id="content">
  
@@ -90,12 +68,6 @@ get_header(); ?>
                         <div class="container">
                         
                             <h1><?php echo types_render_field("titulo-pagina", array("output"=>"html"));  ?></h1>
-                            <div class="boxtelefones">
-                                <span class="exibirtelefone"><strong>Clique para exibir telefone</strong></span>
-                                <h4 class="telefones">
-                                    <?php echo types_render_field("telefone", array("output"=>"html"));  ?>
-                                </h4>
-                            </div>
                             <h5><?php echo types_render_field("sub-titulo", array("output"=>"html"));  ?></h5>
                             
                         </div>
@@ -186,6 +158,15 @@ get_header(); ?>
 
         </script>
 
+
+		<script type="text/javascript">
+			//coloca os valores no input
+			$(function(){
+				$('#linha-modelo').val('<?php echo $linha ?> - <?php echo $modelo ?>');
+			});
+		</script>
+
+
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
         <script type="text/javascript">
@@ -200,5 +181,5 @@ get_header(); ?>
 
             $('.telefone').mask(SPMaskBehavior, spOptions);
         </script>
- 
+		
 <?php get_footer(); ?>

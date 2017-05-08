@@ -79,7 +79,7 @@ $id_rule = get_post_meta($post->ID, $key, true);
 
                                     foreach($terms_childs as $childs)
                                     {
-                                        $submenus .= '<li><a href="'.$url_blog.'/linha-produto/'.$item->slug.'/'.$childs->slug.'">'.$childs->name.'</a></li>';
+                                        $submenus .= '<li><a href="'.$url_blog.'/linha-de-produtos/'.$item->slug.'/'.$childs->slug.'">'.$childs->name.'</a></li>';
                                     }
 
                                     if($contador == 0)

@@ -17,8 +17,12 @@
 
     <link type="text/css" href="<?php echo get_bloginfo('template_url')."/assets/css/jquery.jscrollpane.css"; ?>" rel="stylesheet" media="all" />
 
+
+
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_url')."/assets/css/media-queries.css"; ?>" />
+
+    <link type="text/css" href="<?php echo get_bloginfo('template_url')."/assets/css/navigation.css"; ?>" rel="stylesheet" media="all" />
  
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
@@ -44,8 +48,23 @@
                 s.parentNode.insertBefore(ga, s);
             })();
 //]]></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WHBDRM6');</script>
+<!-- End Google Tag Manager -->
+
 </head>
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHBDRM6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div id="wrapper" class="hfeed">
 	<header>
 	    <div id="header">
@@ -91,7 +110,7 @@
 									<img src="<?php echo get_bloginfo('template_url')."/assets/images/lupa_icon.jpg"; ?>" height="21" width="20">
 								</div>
 								<div class="box-form-search">
-									<form action="<?php echo get_bloginfo('url')."/resultado-busca/"; ?>" method="post">
+									<form action="<?php echo get_bloginfo('url')."/resultado-busca/"; ?>" method="get">
 										<input name="termo" type="text" class="input_search" placeholder="Qual produto você está procurando?" />
 										<input type="submit" value="Buscar" class="bt-buscar">
 									</form>
