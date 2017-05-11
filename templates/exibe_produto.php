@@ -219,7 +219,7 @@
 
                     if(isset($link_pdf) && !empty($link_pdf))
                     {
-                        $html .= '<form action="'.get_bloginfo('url').'/orcamento/" method="POST">
+                        $html .= '<form action="'.get_bloginfo('url').'/orcamento/" method="GET">
 
 
                                   <input type="hidden" name="modelo" value="'.$modelo.'" />

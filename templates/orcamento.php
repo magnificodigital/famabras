@@ -4,8 +4,8 @@
 		Template Name: Orçamento
 	*/
 
-	$modelo = $_POST['modelo'];
-	$linha = $_POST['linha'];
+	$modelo = $_GET['modelo'];
+	$linha = $_GET['linha'];
 
 	get_header();
 
