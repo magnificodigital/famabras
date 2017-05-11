@@ -1,12 +1,9 @@
 <?php
-if(isset($_GET['termo']))
-{
-    $termo = $_GET['termo'];
-}
-else
-{
-    //echo '<script>window.location.href="http://mdcode.local/famabras/"</script>';
-} 
+
+    if(isset($_GET['termo'])) {
+        $termo = $_GET['termo'];
+    } 
+
 	/*
 		Template Name: Resultado Busca
 	*/
@@ -21,7 +18,7 @@ get_header();
         <div id="container">
             <div id="content">
  
-<?php the_post(); ?>
+                <?php the_post(); ?>
  
                 <div class="pages" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <div class="row_verde">
@@ -51,19 +48,20 @@ get_header();
                                         <div class="scroll-pane">
                                             <?php
 
-                                                 $pageposts = $wpdb->get_results($querystr, OBJECT);
+                                                //$pageposts = $wpdb->get_results($querystr, OBJECT);
 
-                                                 $args = array(
+                                                $args = array(
                                                     'post_type' => 'produto',
                                                     'posts_per_page' => -1,
                                                     'post_title_like' => $termo
                                                 );
-
+                                                
                                                 $loop = new WP_Query($args);
 
                                                 if(!$loop->have_posts())
                                                 {
                                                     echo "Nenhum produto cadastrado nessa categoria.";
+
                                                 }
                                                 else
                                                 {

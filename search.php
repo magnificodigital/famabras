@@ -1,74 +1,118 @@
 <?php get_header(); ?>
- 
-        <div id="container">
-            <div id="content">
- 
-				<?php if ( have_posts() ) : ?>
+<?php $busca = $_GET['s']; ?>
+<div id="container">
+    <div id="content">
+    	<div class="pages" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				                <h1 class="page-title"><?php _e( 'Search Results for: ', 'hbd-theme' ); ?><span><?php the_search_query(); ?></span></h1>
+	    	<div class="row_verde">
+		        <div class="container">
+		            <h1>Busca de Produtos</h1>
+		            <h5>Termo buscado: <?php echo $busca; ?></h5>
+		        </div>
+		    </div>
 
-				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
-				                <div id="nav-above" class="navigation">
-				                    <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?></div>
-				                    <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?></div>
-				                </div><!-- #nav-above -->
-				<?php } ?>                            
+		    <div class="entry-content">
+                <div class="container"> 
+                    <div class="row">
+                        
 
-				<?php while ( have_posts() ) : the_post() ?>
+                            <?php if (have_posts()) : 
 
-				                <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'hbd-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                            	echo "<ul>";
 
-				<?php if ( $post->post_type == 'post' ) { ?>
-				                    <div class="entry-meta">
-				                        <span class="meta-prep meta-prep-author"><?php _e('By ', 'hbd-theme'); ?></span>
-				                        <span class="author vcard"><a class="url fn n" href="<?php echo get_author_link( false, $authordata->ID, $authordata->user_nicename ); ?>" title="<?php printf( __( 'View all posts by %s', 'hbd-theme' ), $authordata->display_name ); ?>"><?php the_author(); ?></a></span>
-				                        <span class="meta-sep"> | </span>
-				                        <span class="meta-prep meta-prep-entry-date"><?php _e('Published ', 'hbd-theme'); ?></span>
-				                        <span class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php the_time( get_option( 'date_format' ) ); ?></abbr></span>
-				                        <?php edit_post_link( __( 'Edit', 'hbd-theme' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t" ) ?>
-				                    </div><!-- .entry-meta -->
-				<?php } ?>
+                            	while(have_posts()) : the_post(); ?>
 
-				                    <div class="entry-summary">
-				<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'hbd-theme' )  ); ?>
-				<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'hbd-theme' ) . '&after=</div>') ?>
-				                    </div><!-- .entry-summary -->
+                            	
+                        		<li class="col-xs-12">
+                        			
+                        			<?php get_template_part('templates/exibe_produto'); ?>
+                        		</li>
+					    		
 
-				<?php if ( $post->post_type == 'post' ) { ?>
-				                    <div class="entry-utility">
-				                        <span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'hbd-theme' ); ?></span><?php echo get_the_category_list(', '); ?></span>
-				                        <span class="meta-sep"> | </span>
-				                        <?php the_tags( '<span class="tag-links"><span class="entry-utility-prep entry-utility-prep-tag-links">' . __('Tagged ', 'hbd-theme' ) . '</span>', ", ", "</span>\n\t\t\t\t\t\t<span class=\"meta-sep\">|</span>\n" ) ?>
-				                        <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'hbd-theme' ), __( '1 Comment', 'hbd-theme' ), __( '% Comments', 'hbd-theme' ) ) ?></span>
-				                        <?php edit_post_link( __( 'Edit', 'hbd-theme' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t\n" ) ?>
-				                    </div><!-- #entry-utility -->
-				<?php } ?>
-				                </div><!-- #post-<?php the_ID(); ?> -->
+					    	<?php endwhile; ?>
+					    	<?php echo "</ul>"; ?>
+					    	<?php else: 
 
-				<?php endwhile; ?>
+					    		//se não achar nenhum modelo específico, ele busca a categoria
 
-				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
-				                <div id="nav-below" class="navigation">
-				                    <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?></div>
-				                    <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?></div>
-				                </div><!-- #nav-below -->
-				<?php } ?>            
+					    	/*
 
-				<?php else : ?>
+					    		if ($busca != "") {
 
-				                <div id="post-0" class="post no-results not-found">
-				                    <h2 class="entry-title"><?php _e( 'Nothing Found', 'hbd-theme' ) ?></h2>
-				                    <div class="entry-content">
-				                        <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'hbd-theme' ); ?></p>
-				    <?php get_search_form(); ?>
-				                    </div><!-- .entry-content -->
-				                </div>
 
-				<?php endif; ?>           
- 
-            </div><!-- #content -->
-			<?php get_sidebar(); ?>
-        </div><!-- #container -->
- 
+									//Tirar acentos e caracteres especiais
+									//Graças ao eterno pai, tem uma função do wp que faz isso
+									$busca = sanitize_title($busca);
+
+									//Vê se é plural
+									$final = substr($busca, -1);
+
+					    			if ($final == "s") {
+					    				if ($busca != "manometros" && $busca != "termometros" && $busca != "macaricos") {
+					    					//echo $busca;
+					    					$busca = substr($busca, 0,-1);
+					    				}
+					    			}
+						    		
+						    
+						    		$cats = get_terms('linha-produto',array('hide_empty' => false));
+
+						    		$string = $busca;
+									$pattern = '/[ -]+/';
+									$replacement = '${1}-$3';
+
+									$term = preg_replace($pattern, $replacement, $busca);
+
+						    		foreach ($cats as $cat) {
+
+						    			$termo = "/".$cat->slug."/i";
+
+						    			if ($term == $cat->slug || $term == $cat->name) {
+						    				
+											global $post;
+											$slug = $cat->slug;
+
+											$posts = array(
+											    'post-type' => 'produto',
+											    //'paged'=>$paged,
+											    //'posts_per_page'=>10,
+											    'orderby' => 'date',
+											    'order'   => 'ASC',
+											    'tax_query' => array(
+											        array(
+											            'taxonomy' => 'linha-produto',
+											            'field' => 'slug',
+											            'terms' => $slug
+											        )
+											    )
+											);
+
+											$loop = new WP_Query( $posts );
+											if($loop->have_posts()) {
+												while ( $loop->have_posts() ) : $loop->the_post();
+													get_template_part('templates/exibe_produto');
+											    endwhile; 
+											    wp_reset_postdata();
+											} 
+						    			}
+						    		}
+
+					    		}
+					    		
+					    	?>
+
+					    	*/
+
+					
+					    	echo "Nenhum resultado encontrado para: ".$busca;
+					    	endif; ?>
+
+
+                    </div>
+                </div>
+            </div>
+
+    	</div>
+    </div>
+</div>
 <?php get_footer(); ?>

@@ -38,16 +38,3 @@
     </div>
 </div>
 
-<script type="text/javascript">
-        $(window).load(function() {
-          $('.depoimento_slider').flexslider({
-            directionNav:false,
-            animation: "slide",
-            animationLoop: true,
-            itemWidth: 1200,
-            itemMargin: 30,
-            minItems: 1,
-            maxItems: 3
-          });
-        });
-</script>

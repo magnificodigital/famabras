@@ -194,11 +194,15 @@
 
                     width: largura
 
-                }, 600);
+                }, 600, function(){
+                    $(this).find('input').focus();
+                });
 
 
 
                 flag_open = false;
+
+
 
             }
 
@@ -224,6 +228,41 @@
 
     </script>
 
-</body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider.min.js"></script>
+    <script type="text/javascript">
+        jQuery(window).load(function() {
+          jQuery('.depoimento_slider').flexslider({
+            directionNav:false,
+            animation: "slide",
+            animationLoop: true,
+            itemWidth: 1200,
+            itemMargin: 30,
+            minItems: 1,
+            maxItems: 3
+          });
+        });
+</script>
 
+<script type="text/javascript">
+        jQuery(window).load(function() {
+          jQuery('.blogslider').flexslider({
+            animation: "slide",
+            animationLoop: true,
+            directionNav: false,
+            itemWidth: 500,
+            itemMargin: 130,
+            minItems: 1,
+            maxItems: 6
+          });
+        });
+
+        function vaiProduto(id)
+        {
+            jQuery('#id_prod').val(id);
+
+            jQuery('#form_prod').submit();
+        }
+</script>
+
+</body>
 </html>

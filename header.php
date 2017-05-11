@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_url')."/assets/css/media-queries.css"; ?>" />
 
     <link type="text/css" href="<?php echo get_bloginfo('template_url')."/assets/css/navigation.css"; ?>" rel="stylesheet" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css">
  
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
@@ -110,8 +111,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									<img src="<?php echo get_bloginfo('template_url')."/assets/images/lupa_icon.jpg"; ?>" height="21" width="20">
 								</div>
 								<div class="box-form-search">
-									<form action="<?php echo get_bloginfo('url')."/resultado-busca/"; ?>" method="get">
-										<input name="termo" type="text" class="input_search" placeholder="Qual produto você está procurando?" />
+									<form action="<?php echo get_bloginfo('url'); ?>" method="get">
+										<input name="s" type="text" class="input_search" placeholder="Qual produto você está procurando?" />
 										<input type="submit" value="Buscar" class="bt-buscar">
 									</form>
 								</div>

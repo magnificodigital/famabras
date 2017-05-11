@@ -166,25 +166,6 @@ get_header(); ?>
         </div>
     </section>
 
-    <script type="text/javascript">
-            $(window).load(function() {
-              $('.blogslider').flexslider({
-                animation: "slide",
-                animationLoop: true,
-                directionNav: false,
-                itemWidth: 500,
-                itemMargin: 130,
-                minItems: 1,
-                maxItems: 6
-              });
-            });
-
-            function vaiProduto(id)
-            {
-                $('#id_prod').val(id);
-
-                $('#form_prod').submit();
-            }
-    </script>
+   
 
 <?php get_footer(); ?>
