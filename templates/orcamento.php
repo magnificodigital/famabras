@@ -6,6 +6,7 @@
 
 	$modelo = $_GET['modelo'];
 	$linha = $_GET['linha'];
+    $text = $linha." - ".$modelo;
 
 	get_header();
 
@@ -162,7 +163,7 @@
 		<script type="text/javascript">
 			//coloca os valores no input
 			$(function(){
-				$('#linha-modelo').val('<?php echo $linha ?> - <?php echo $modelo ?>');
+				$('#linha-modelo').val('<?php echo $text ?>');
 			});
 		</script>
 
