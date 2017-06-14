@@ -33,7 +33,7 @@ get_header();
                         if(isset($image_header) && !empty($image_header)) :
                     ?>
                         <div class="img-header-page">
-                            <img src="<?php echo types_render_field("imagem-header", array("output"=>"raw")); ?>" />
+                            <img src="<?php echo types_render_field("imagem-header", array("output"=>"raw")); ?>" alt="<?php echo get_the_title(); ?>" />
                         </div>
                     <?php
                         endif;
@@ -89,7 +89,7 @@ get_header();
                                                                 if(isset($link_pdf) && !empty($link_pdf)) :
                                                             ?>
                                                                 <a href="<?php echo $link_pdf ?>" target="_blank">
-                                                                    <img src="<?php echo get_bloginfo('template_url')."/assets/images/icon_pdf.jpg"; ?>" border="0" />
+                                                                    <img src="<?php echo get_bloginfo('template_url')."/assets/images/icon_pdf.jpg"; ?>" border="0" alt="Baixar PDF" />
                                                                 </a>
                                                             <?php
                                                                 endif;

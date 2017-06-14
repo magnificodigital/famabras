@@ -40,7 +40,7 @@ $id_rule = get_post_meta($post->ID, $key, true);
                         if(isset($image_header) && !empty($image_header)) :
                     ?>
                         <div class="img-header-page">
-                            <img src="<?php echo types_render_field("imagem-header", array("output"=>"raw")); ?>" />
+                            <img src="<?php echo types_render_field("imagem-header", array("output"=>"raw")); ?>" alt="<?php the_title(); ?>" />
                         </div>
                     <?php
                         endif;
@@ -53,8 +53,10 @@ $id_rule = get_post_meta($post->ID, $key, true);
                             'parent' => 0
                         ) );
                     ?>
-                    <div class="entry-content" style="padding-top: 0">
+                    <div class="entry-content">
                         <div class="container">
+
+                            <?php get_template_part('templates/breadcrumbs'); ?>
 
                             <?php
                                 $contador = 0;
@@ -90,7 +92,7 @@ $id_rule = get_post_meta($post->ID, $key, true);
                                     $html .= '
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <div class="img_cat">
-                                                <img src="'.$image_url.'" />
+                                                <img src="'.$image_url.'" alt="'.$item->name.'" />
                                             </div>
                                             <div class="info_cat">
                                                 <h2>'.$item->name.'</h2>

@@ -23,19 +23,24 @@
 							<div class="row">
                                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                                 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                		<?php get_template_part('templates/breadcrumbs'); ?>
 	                                	<h1 class="entry-title" style="margin-bottom: 40px;"><?php the_title(); ?></h1>
 										<?php the_content(); ?>
+										<div class="fb-comments" data-href="http://famabras.com.br?p=<?php the_ID(); ?>" data-width="100%" data-numposts="10"></div>
 									</div>
 								</div>
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 sidebar">
 	                                <?php get_sidebar(); ?>
 	                            </div>
 							</div>
+
+
+
 							<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'hbd-theme' ) . '&after=</div>') ?>
 						</div>
 					</div><!-- .entry-utility --> 
             
- 				<?php comments_template('', true); ?>
+ 				<?php //comments_template('', true); ?>
 
             </div><!-- #content -->
         </div><!-- #container -->

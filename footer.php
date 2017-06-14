@@ -38,7 +38,7 @@
 
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 logo-footer">
 
-                <img src="<?php echo get_bloginfo('template_url')."/assets/images/logo_farmabras-copy.jpg"; ?>" />
+                <img src="<?php echo get_bloginfo('template_url')."/assets/images/logo_farmabras-copy.jpg"; ?>" alt="<?php echo get_bloginfo('name') ?>" />
 
                 <div class="redes-sociais">
 
@@ -116,9 +116,9 @@
 
             <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-12">
 
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><img src="<?php echo get_bloginfo('template_url')."/assets/images/inmetro.jpg"; ?>" /></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><img src="<?php echo get_bloginfo('template_url')."/assets/images/inmetro.jpg"; ?>" alt="Inmetro" /></div>
 
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 logo-sgs"><img src="<?php echo get_bloginfo('template_url')."/assets/images/SGS.jpg"; ?>" /></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 logo-sgs"><img src="<?php echo get_bloginfo('template_url')."/assets/images/SGS.jpg"; ?>" alt="SGS" /></div>
 
             </div>
 
@@ -138,7 +138,7 @@
 
     <div class="img_enviado_news">
 
-        <img src="<?php echo get_bloginfo('template_url')."/assets/images/news_enviada.jpg"; ?>">
+        <img src="<?php echo get_bloginfo('template_url')."/assets/images/news_enviada.jpg"; ?>" alt="Aviso news">
 
     </div>
 
@@ -263,6 +263,15 @@
             jQuery('#form_prod').submit();
         }
 </script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9&appId=624845964385137";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 </body>
 </html>

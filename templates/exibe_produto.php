@@ -51,7 +51,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="img-linha-prod">
-                            '.get_the_post_thumbnail().'
+                            '.get_the_post_thumbnail(null,null,array('title' => $modelo, 'alt' => $modelo)).'
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 desc-produto">';
@@ -229,7 +229,7 @@
                                   
                                   </form>
                                   <a href="'.$link_pdf.'" target="_blank">
-                                    <img src="'.get_bloginfo('template_url').'/assets/images/icon_pdf.jpg" border="0" />
+                                    <img src="'.get_bloginfo('template_url').'/assets/images/icon_pdf.jpg" border="0" alt="Baixar PDF" />
                                   </a>
 
                                   '

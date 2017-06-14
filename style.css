@@ -40,6 +40,10 @@ p {
     padding-right: 20px;
 }
 
+.navbar-nav li {
+    float: left;
+}
+
 .navbar-nav li a{
     text-transform: uppercase;
     color: #007f00 !important;
@@ -1157,4 +1161,37 @@ footer p{
     width: 1170px;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+.navbar-header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#breadcrumbs {
+    font-size: 12px;
+}
+#breadcrumbs a {
+    color: #127112;
+}
+
+.error404 {padding: 50px 0;}
+.error404 h1 {
+    font-size: 6rem;
+    color: #127112;
+    font-weight: 700;
+}
+
+.error404 input {
+    padding: 10px;
+    outline: none;
+    border: 1px solid #DDD;
+}
+
+.error404 input[type="submit"] {
+    background: #127112;
+    color: #FFF;
+    border: 0;
 }

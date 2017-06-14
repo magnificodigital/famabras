@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
     <title><?php
-        if ( is_single() ) { single_post_title(); }
+        /*if ( is_single() ) { single_post_title(); }
         elseif ( is_home() || is_front_page() ) { bloginfo('name'); print ' | '; bloginfo('description'); get_page_number(); }
         elseif ( is_page() ) { single_post_title(''); }
         elseif ( is_search() ) { bloginfo('name'); print ' | Resultados para ' . wp_specialchars($s); get_page_number(); }
         elseif ( is_404() ) { bloginfo('name'); print ' | Not Found'; }
-        else { bloginfo('name'); wp_title('|'); get_page_number(); }
+        else { bloginfo('name'); wp_title('|'); get_page_number(); }*/
+        wp_title();
     ?></title>
  
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -58,6 +59,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WHBDRM6');</script>
 <!-- End Google Tag Manager -->
 
+	<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/assets/images/favicon.png" type="image/x-icon">
+
 </head>
 <body>
 
@@ -80,7 +83,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		                        <span class="icon-bar"></span>
 		                        <span class="icon-bar"></span>
 		                      </button>
-		                      <a class="navbar-brand" href="<?php echo get_bloginfo('url'); ?>"><img src="<?php echo get_bloginfo('template_url')."/assets/images/logo_farmabras.png"; ?>" /></a>
+		                      
+		                      <?php if (is_home() || is_front_page()) : ?>
+		                      	<h1>
+		                      <?php endif ?>
+		                      <a class="navbar-brand" href="<?php echo get_bloginfo('url'); ?>"><img src="<?php echo get_bloginfo('template_url')."/assets/images/logo_farmabras.png"; ?>" alt="<?php echo get_bloginfo('name') ?>" title="<?php echo get_bloginfo('name') ?>" /></a>
+		                      <?php if (is_home()) : ?>
+		                      	</h1>
+		                      <?php endif ?>
+
+
 		                    </div>
 		                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		                        <ul class="nav navbar-nav openBold">
@@ -108,7 +120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		                    </div>
 		                    <div class="box-search">
 		                    	<div class="icon-search">
-									<img src="<?php echo get_bloginfo('template_url')."/assets/images/lupa_icon.jpg"; ?>" height="21" width="20">
+									<img src="<?php echo get_bloginfo('template_url')."/assets/images/lupa_icon.jpg"; ?>" height="21" width="20" alt="Lupa Pesquisa">
 								</div>
 								<div class="box-form-search">
 									<form action="<?php echo get_bloginfo('url'); ?>" method="get">

@@ -22,7 +22,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <h4>Desde 1965</h4>
-                    <div class="img-informacoes"><img src="<?php echo get_bloginfo('template_url')."/assets/images/fabrica.jpg"; ?>" /></div>
+                    <div class="img-informacoes"><img src="<?php echo get_bloginfo('template_url')."/assets/images/fabrica.jpg"; ?>" alt="Empresa Famabras" /></div>
                     <ul>
                         <li>Instrumento de Medição para Grandeza Pressão e Temperatura</li>
                         <li>Equipamentos de Solda e Controle de Gases Comprimidos</li>
@@ -31,7 +31,7 @@ get_header(); ?>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <h4>Serviços</h4>
-                    <div class="img-informacoes"><img src="<?php echo get_bloginfo('template_url')."/assets/images/servicos_home.jpg"; ?>" /></div>
+                    <div class="img-informacoes"><img src="<?php echo get_bloginfo('template_url')."/assets/images/servicos_home.jpg"; ?>" alt="Serviços" /></div>
                     Laboratório de Pressão Acreditado
                     <ul>
                         <li>Instrumento de Medição para Grandeza Pressão e Temperatura</li>
@@ -86,7 +86,7 @@ get_header(); ?>
                         $html .= '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                     <div class="box-produto-categoria">
                                         <a href="'.$url.$cat->slug.'">
-                                            <div class="img-prod-categoria"><img src="'.$image_url.'" /></div>
+                                            <div class="img-prod-categoria"><img src="'.$image_url.'" alt="'.$cat->name.'" /></div>
                                             <div class="divider-prod-cat"></div>
                                             <div class="nome-prod-cat">'.$cat->name.'</div>
                                         </a>
@@ -151,7 +151,7 @@ get_header(); ?>
                     ?>
                             <li>
                                 <div class="title-blog"><?php echo get_the_title(); ?></div>
-                                <div class="img-post-blog"><img src="<?php echo $url ?>" width="471" height="163" /></div>
+                                <div class="img-post-blog"><img src="<?php echo $url ?>" width="471" height="163" alt="<?php echo get_the_title(); ?>" /></div>
                                 <div class="txt-post-blog"><?php the_excerpt(); ?></div>
                                 <a href="<?php the_permalink(); ?>" class="bt-saiba-mais">Saiba mais</a>
                             </li>

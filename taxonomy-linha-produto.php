@@ -48,7 +48,7 @@ foreach ($terms as $term) {
                         if(isset($image_header) && !empty($image_header)) :
                     ?>
                         <div class="img-header-page">
-                            <img src="<?php echo types_render_field("imagem-header", array("output"=>"raw")); ?>" />
+                            <img src="<?php echo types_render_field("imagem-header", array("output"=>"raw")); ?>" alt="<?php echo get_the_title(); ?>" />
                         </div>
                     <?php
                         endif;
@@ -58,7 +58,7 @@ foreach ($terms as $term) {
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="listagem-produtos">
-                                        <div class="loading" style="display:block"><img src="<?php echo get_bloginfo('template_url')."/assets/images/loading.gif"; ?>" /></div>
+                                        <div class="loading" style="display:block"><img src="<?php echo get_bloginfo('template_url')."/assets/images/loading.gif"; ?>" alt="carregando" /></div>
                                         <div class="scroll-pane">
                                             
                                         </div>

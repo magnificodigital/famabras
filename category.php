@@ -34,7 +34,7 @@
 						                    <h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'hbd-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 											
 											<div class="img-vitrine-blog">
-		                                        <img src="<?php echo $image_vitrine; ?>">
+		                                        <img src="<?php echo $image_vitrine; ?>" alt="<?php echo get_the_title(); ?>">
 		                                    </div>
 
 						                    <!--<div class="entry-meta">

@@ -47,7 +47,7 @@ $id_rule = get_post_meta($post->ID, $key, true);
                         if(isset($image_header) && !empty($image_header)) :
                     ?>
                         <div class="img-header-page">
-                            <img src="<?php echo types_render_field("imagem-header", array("output"=>"raw")); ?>" />
+                            <img src="<?php echo types_render_field("imagem-header", array("output"=>"raw")); ?>" alt="<?php echo get_the_title(); ?>" />
                         </div>
                     <?php
                         endif;
@@ -57,6 +57,7 @@ $id_rule = get_post_meta($post->ID, $key, true);
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="listagem-produtos">
+                                        <?php get_template_part('templates/breadcrumbs'); ?>
                                         <!--<div class="loading" style="display:block"><img src="<?php echo get_bloginfo('template_url')."/assets/images/loading.gif"; ?>" /></div>-->
                                         <div class="scroll-pane">
                                           
