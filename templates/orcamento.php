@@ -16,45 +16,70 @@
 <head>
 <link type="text/css" href="<?php echo get_bloginfo('template_url')."/assets/css/tagit.css"; ?>" rel="stylesheet" media="all" />
 <style type="text/css">
-      html, body { height: 100%; margin: 0; padding: 0; }
-      #map { height: 400px; }
+        
+    html, body { height: 100%; margin: 0; padding: 0; }
+    #map { height: 400px; }
+    ul.tagit li.tagit-choice {
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border: 1px solid #127112;
+        background: none;
+        background-color: #127112;
+        font-weight: normal;
+    }
 
-      ul.tagit li.tagit-choice {
-            -moz-border-radius: 6px;
-            border-radius: 6px;
-            -webkit-border-radius: 6px;
-            border: 1px solid #127112;
-            background: none;
-            background-color: #127112;
-            font-weight: normal;
-        }
+    ul.tagit li.tagit-choice .tagit-label:not(a), ul.tagit li.tagit-choice .tagit-close .text-icon {
+        color: #fff;
+    }
 
-        ul.tagit li.tagit-choice .tagit-label:not(a), ul.tagit li.tagit-choice .tagit-close .text-icon {
-            color: #fff;
-        }
+    ul.tagit li.tagit-choice .tagit-close {
+        right: .4em;
+    }
 
-        ul.tagit li.tagit-choice .tagit-close {
-            right: .4em;
-        }
+    ul.tagit li.tagit-choice .tagit-close .text-icon{
+        display: block;
+    }
 
-        ul.tagit li.tagit-choice .tagit-close .text-icon{
-            display: block;
-        }
+    ul.tagit{
+        border-color: #127112;
+    }
 
-        ul.tagit{
-            border-color: #127112;
-        }
+    .tagit-new input{
+        width: 100%;
+        border: 1px solid #127112;
+        color: #454545;
+    }
 
-        .tagit-new input{
-            width: 100%;
-            border: 1px solid #127112;
-            color: #454545;
-        }
+    ul.tagit li.tagit-choice:hover, ul.tagit li.tagit-choice.remove {
+        background-color: #159815;
+        border-color: #159815;
+    }
 
-        ul.tagit li.tagit-choice:hover, ul.tagit li.tagit-choice.remove {
-            background-color: #159815;
-            border-color: #159815;
-        }
+    .boxtelefones {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .boxtelefones span.exibirtelefone {
+        color: #127112;
+        font-size: 16px;
+        padding: 8px;
+        background: #FFF;
+        margin: 0 auto;
+        text-align: center;
+        display: table;
+        cursor: pointer;
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+    }
+
+    .boxtelefones span.exibirtelefone:hover {
+        opacity: 0.9;
+    }
+
+    .boxtelefones .telefones {color: #FFF;}
 
 </style>
 
@@ -69,6 +94,12 @@
                         <div class="container">
                         
                             <h1><?php echo types_render_field("titulo-pagina", array("output"=>"html"));  ?></h1>
+                            <div class="boxtelefones">
+                                <span class="exibirtelefone"><strong>Clique para exibir telefone</strong></span>
+                                <h4 class="telefones">
+                                    <?php echo types_render_field("telefone", array("output"=>"html"));  ?>
+                                </h4>
+                            </div>
                             <h5><?php echo types_render_field("sub-titulo", array("output"=>"html"));  ?></h5>
                             
                         </div>

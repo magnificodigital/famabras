@@ -100,16 +100,16 @@ $id_rule = get_post_meta($post->ID, $key, true);
                                                 echo "Nenhum produto cadastrado nessa categoria.";
                                             }
 
-                                                //echo $html;
-                                                $big = 999999999;
-                                                $p = array(
-                                                    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                                                    'format' => '?paged=%#%',
-                                                    'current' => max( 1, get_query_var('paged') ),
-                                                    'total' => $loop->max_num_pages
-                                                );
+                                            //echo $html;
+                                            $big = 999999999;
+                                            $p = array(
+                                                'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                                                'format' => '?paged=%#%',
+                                                'current' => max( 1, get_query_var('paged') ),
+                                                'total' => $loop->max_num_pages
+                                            );
 
-                                                echo '<div class="navigation">'.paginate_links($p).'</div>';
+                                            echo '<div class="navigation">'.paginate_links($p).'</div>';
                                                 //previous_posts_link( 'Anterior posts &raquo;' , $loop->max_num_pages );
                                                 //next_posts_link('Próximo &raquo;', $loop->max_num_pages ); 
                                             /*

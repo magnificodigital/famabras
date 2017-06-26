@@ -8,45 +8,46 @@ get_header(); ?>
 <head>
 <link type="text/css" href="<?php echo get_bloginfo('template_url')."/assets/css/tagit.css"; ?>" rel="stylesheet" media="all" />
 <style type="text/css">
-      html, body { height: 100%; margin: 0; padding: 0; }
-      #map { height: 400px; }
+    
+    html, body { height: 100%; margin: 0; padding: 0; }
+    #map { height: 400px; }
 
-      ul.tagit li.tagit-choice {
-            -moz-border-radius: 6px;
-            border-radius: 6px;
-            -webkit-border-radius: 6px;
-            border: 1px solid #127112;
-            background: none;
-            background-color: #127112;
-            font-weight: normal;
-        }
+    ul.tagit li.tagit-choice {
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border: 1px solid #127112;
+        background: none;
+        background-color: #127112;
+        font-weight: normal;
+    }
 
-        ul.tagit li.tagit-choice .tagit-label:not(a), ul.tagit li.tagit-choice .tagit-close .text-icon {
-            color: #fff;
-        }
+    ul.tagit li.tagit-choice .tagit-label:not(a), ul.tagit li.tagit-choice .tagit-close .text-icon {
+        color: #fff;
+    }
 
-        ul.tagit li.tagit-choice .tagit-close {
-            right: .4em;
-        }
+    ul.tagit li.tagit-choice .tagit-close {
+        right: .4em;
+    }
 
-        ul.tagit li.tagit-choice .tagit-close .text-icon{
-            display: block;
-        }
+    ul.tagit li.tagit-choice .tagit-close .text-icon{
+        display: block;
+    }
 
-        ul.tagit{
-            border-color: #127112;
-        }
+    ul.tagit{
+        border-color: #127112;
+    }
 
-        .tagit-new input{
-            width: 100%;
-            border: 1px solid #127112;
-            color: #454545;
-        }
+    .tagit-new input{
+        width: 100%;
+        border: 1px solid #127112;
+        color: #454545;
+    }
 
-        ul.tagit li.tagit-choice:hover, ul.tagit li.tagit-choice.remove {
-            background-color: #159815;
-            border-color: #159815;
-        }
+    ul.tagit li.tagit-choice:hover, ul.tagit li.tagit-choice.remove {
+        background-color: #159815;
+        border-color: #159815;
+    }
 
     .boxtelefones {
         text-align: center;
