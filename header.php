@@ -25,6 +25,8 @@
 
     <link type="text/css" href="<?php echo get_bloginfo('template_url')."/assets/css/navigation.css"; ?>" rel="stylesheet" media="all" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css">
+
+    <link rel="stylesheet" href="http://magnificodigital.com/assets/createdby/createdby.css" />
  
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 

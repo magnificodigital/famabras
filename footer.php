@@ -122,6 +122,12 @@
 
             </div>
 
+            <div class="col-xs-12">
+                <center>
+                    <a href="http://magnificodigital.com" target="_blank" class="createdmagnifico gray"></a>
+                </center>
+            </div>
+
         </div>
 
     </div>
